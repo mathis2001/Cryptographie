@@ -61,17 +61,15 @@ def progPrincipal():
 	freq=["e","a","i","t","s","n","l","u","r","o","d","m","c","p","v","q","h","f","b","g","j","x","y","w","z","k"]
 	d=dico_rot_13()
 
-	#chiffrement d'une lettre
+	#traitement
 	lettre=input("Veuillez entrer une lettre:")
 	lettre_chiffree=chiffrement_lettre(lettre,d)
 	print(lettre_chiffree)
 	
-	#chiffrement d'une phrase
 	d_tempo={"a":"b","b":"c","c":"d","d":"e","e":"f","f":"g","g":"h","h":"i","i":"j","j":"k","l":"m","m":"n","n":"o","o":"p","p":"q","q":"r","r":"s","s":"t","t":"u","u":"v","v":"w","w":"x","x":"y","y":"z","z":"a","a":"b"}
 	chiffrement=chiffrement_phrase(p,d_tempo)
 	print(chiffrement)
 	
-	#déchiffrment d'une phrase
 	inv_d=inverse_dico(d_tempo)
 	dechiffrement=chiffrement_phrase(chiffrement,inv_d)
 	print(dechiffrement)
@@ -79,7 +77,6 @@ def progPrincipal():
 	chiffrement=chiffrement_phrase(p,d)
 	print(chiffrement)
 	
-	#tri bulles
 	count=compte_lettres(pc)
 	tri=tri_bulles_dico(count)
 	tri_dico=dict(tri)
